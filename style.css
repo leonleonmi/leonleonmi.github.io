@@ -1,0 +1,15 @@
+/* FILEPATH: /Users/leonmichel/Documents/website/style.css */
+
+@font-face {
+    font-family: 'TemposRomanMono';
+    src: url('fonts/TemposRomanMono.otf');
+}
+
+h1 {
+    font-family: 'TemposRomanMono', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
