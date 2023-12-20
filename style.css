@@ -1,8 +1,17 @@
 /* FILEPATH: /Users/leonmichel/Documents/website/style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 @font-face {
     font-family: 'TemposRomanMono';
     src: url('fonts/TemposRomanMono.otf');
+}
+
+body {
+    overflow: hidden; /* Hide the scrollbars */
 }
 
 h1 {
@@ -12,4 +21,56 @@ h1 {
     align-items: center;
     height: 100vh;
     margin: 0;
+}
+
+.split {
+    display: flex;
+    height: 100vh; /* Set the height of the container to 100% of the viewport height */
+}
+
+.left, .right {
+    flex: 1; /* This makes the divs take up an equal amount of space */
+    
+}
+
+.left::-webkit-scrollbar {
+    display: none;
+}
+
+.left {
+    background-color: #f2f2f2; /* Just for demonstration */
+    overflow-y: auto;
+    
+}
+
+.right::-webkit-scrollbar {
+    display: none;
+}
+
+.right {
+    background-color: #cccccc; /* Just for demonstration */
+    overflow-y: auto;
+
+}
+
+.right img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.textfield {
+    padding: 20px;
+    font-size: 5vw;
+}
+
+@media only screen and (max-width: 812px) {
+    .textfield {
+        font-size: 7vw;
+    }
+
+    .right {
+        display: none;
+    }
 }
