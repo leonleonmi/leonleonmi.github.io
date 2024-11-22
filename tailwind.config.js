@@ -2,13 +2,12 @@
 module.exports = {
   content: ["**/*.{html,js}"],
   theme: {
-    colors: {
-      'lemi-blue': '#302AFF',
-      'lemi-offwhite': 'F2F0EF',  
+    extend: {
+      colors: {
+        'lemi-blue': '#302AFF',
+        'lemi-offwhite': '#F2F0EF',  // Added missing '#' for hex color
+      },
     },
-
-    extend: {},
   },
   plugins: [],
 }
-

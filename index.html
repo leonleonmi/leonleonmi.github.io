@@ -6,15 +6,13 @@
     <title>Document</title>
     <link href="./output.css" rel="stylesheet" />
   </head>
-  <body
-    class="relative bg-gradient-to-t from-lemi-offwhite to to-lemi-offwhite m-0 overflow-hidden"
-  >
+  <body class="relative bg-lemi-offwhite dark:bg-gradient-to-b dark:from-zinc-900 dark:to-green-950 m-0 overflow-hidden"></body>
     <div
       id="bg-text"
       class="flex relative flex-col justify-between items-start h-screen p-5"
     >
       <svg
-        class="h-64 w-auto fill-lemi-blue"
+        class="h-64 w-auto fill-lemi-blue dark:fill-lemi-offwhite"
         viewBox="0 0 1852 585"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +75,7 @@
       <div id="spacer" class="flex-grow"></div>
 
       <svg
-        class="h-64 w-auto fill-lemi-blue"
+        class="h-64 w-auto fill-lemi-blue dark:fill-lemi-offwhite"
         viewBox="0 0 2635 585"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -149,19 +147,25 @@
         <img
           src="media/arrow_right.svg"
           alt="arrow-right"
-          class="w-8 h-8 mr-8 invisible group-hover:visible"
+          class="w-8 h-8 mr-8 invisible group-hover:visible dark:filter dark:invert"
           id="arrow-1"
         />
-        <a id="about-link" class="hover:underline cursor-pointer">Über Mich</a>
+        <a
+          id="about-link"
+          class="hover:underline cursor-pointer dark:text-lemi-offwhite"
+          >Über Mich</a
+        >
       </div>
       <div class="nav-element flex group">
         <img
           src="media/arrow_right.svg"
           alt="arrow-right"
-          class="w-8 h-8 mr-8 invisible group-hover:visible"
+          class="w-8 h-8 mr-8 invisible group-hover:visible dark:filter dark:invert"
           id="arrow-2"
         />
-        <a id="education-link" class="hover:underline cursor-pointer"
+        <a
+          id="education-link"
+          class="hover:underline cursor-pointer dark:text-lemi-offwhite"
           >Bildungsweg</a
         >
       </div>
@@ -169,10 +173,12 @@
         <img
           src="media/arrow_right.svg"
           alt="arrow-right"
-          class="w-8 h-8 mr-8 invisible group-hover:visible"
+          class="w-8 h-8 mr-8 invisible group-hover:visible dark:filter dark:invert"
           id="arrow-3"
         />
-        <a id="experience-link" class="hover:underline cursor-pointer"
+        <a
+          id="experience-link"
+          class="hover:underline cursor-pointer dark:text-lemi-offwhite"
           >Berufserfahrung</a
         >
       </div>
@@ -181,16 +187,20 @@
         <img
           src="media/arrow_right.svg"
           alt="arrow-right"
-          class="w-8 h-8 mr-8 invisible group-hover:visible"
+          class="w-8 h-8 mr-8 invisible group-hover:visible dark:filter dark:invert"
           id="arrow-4"
         />
-        <a id="skills-link" class="hover:underline cursor-pointer">Skills</a>
+        <a
+          id="skills-link"
+          class="hover:underline cursor-pointer dark:text-lemi-offwhite"
+          >Skills</a
+        >
       </div>
     </div>
 
     <div
       id="about-box"
-      class="w-4/5 h-full text-box overlay absolute top-0 left-0 p-5 opacity-0 invisible text-xl flex"
+      class="w-4/5 h-full text-box overlay absolute top-0 left-0 p-5 opacity-0 invisible text-xl flex dark:text-lemi-offwhite"
     >
       <img src="media/leon.jpg" alt="Leon" class="h-full mr-8" />
       <div>
@@ -222,7 +232,7 @@
 
     <div
       id="education-box"
-      class="text-box overlay absolute top-0 left-0 p-5 w-3/5 h-auto opacity-0 invisible text-xl"
+      class="text-box overlay absolute top-0 left-0 p-5 w-3/5 h-auto opacity-0 invisible text-xl dark:text-lemi-offwhite"
     >
       <p class="mb-8">
         <strong>M. Sc. Medieninformatik, HTWK Leipzig</strong><br />
@@ -247,7 +257,7 @@
 
     <div
       id="experience-box"
-      class="w-3/5 text-box overlay absolute top-0 left-0 p-5 h-auto opacity-0 invisible text-xl"
+      class="w-3/5 text-box overlay absolute top-0 left-0 p-5 h-auto opacity-0 invisible text-xl dark:text-lemi-offwhite"
     >
       <p class="mb-3">
         <strong>Deutsche Telekom MMS GmbH</strong><br />
@@ -286,7 +296,7 @@
 
     <div
       id="skills-box"
-      class="text-box overlay absolute top-0 left-0 p-5 w-3/5 h-auto opacity-0 invisible text-xl"
+      class="text-box overlay absolute top-0 left-0 p-5 w-3/5 h-auto opacity-0 invisible text-xl dark:text-lemi-offwhite"
     >
       <ul>
         <li><strong>Technische Skills</strong></li>
@@ -308,7 +318,7 @@
 
     <div
       id="arrow-back"
-      class="absolute overlay bottom-0 right-0 mr-5 mb-5 invisible"
+      class="absolute overlay bottom-0 right-0 mr-5 mb-5 invisible dark:filter dark:invert"
     >
       <img src="media/arrow_back.svg" alt="arrow-back" class="w-16 h-16" />
     </div>
