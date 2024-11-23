@@ -2,17 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="theme-color"
+      content="#F2F0EF"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#18181b"
+      media="(prefers-color-scheme: dark)"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Document</title>
     <link href="./output.css" rel="stylesheet" />
   </head>
-  <body class="relative bg-gradient-to-b from-lemi-offwhite to-orange-200 dark:bg-gradient-to-b dark:from-zinc-900 dark:to-green-950 m-0 overflow-hidden"></body>
+  <body
+    class="relative bg-gradient-to-b from-lemi-offwhite to-orange-200 dark:bg-gradient-to-b dark:from-zinc-900 dark:to-green-950 m-0 min-h-screen lg:h-screen overflow-hidden"
+  >
     <div
       id="bg-text"
-      class="flex relative flex-col justify-between items-start h-screen p-5"
+      class="flex lg:relative flex-col justify-top mt-10 lg:mt-0 lg:justify-between lg:items-start h-screen lg:p-5"
     >
       <svg
-        class="h-64 w-auto fill-lemi-blue dark:fill-lemi-offwhite"
+        class="h-16 lg:h-64 lg:w-auto fill-lemi-blue dark:fill-lemi-offwhite"
         viewBox="0 0 1852 585"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -72,10 +85,10 @@
         </g>
       </svg>
 
-      <div id="spacer" class="flex-grow"></div>
+      <div id="spacer" class="lg:flex-grow"></div>
 
       <svg
-        class="h-64 w-auto fill-lemi-blue dark:fill-lemi-offwhite"
+        class="h-16 lg:h-64 lg:w-auto fill-lemi-blue dark:fill-lemi-offwhite"
         viewBox="0 0 2635 585"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -141,13 +154,13 @@
     </div>
     <div
       id="nav"
-      class="h-52 p-5 overlay absolute flex flex-col items-end justify-between top-0 right-0 text-right text-3xl z-10"
+      class="is-visible w-screen h-30 lg:h-52 lg:p-5 overlay absolute flex flex-col items-center lg:items-end lg:justify-between bottom-56 left-0 lg:top-0 lg:right-0 lg:text-right text-2xl lg:text-3xl z-10"
     >
       <div class="nav-element flex group">
         <img
           src="media/arrow_right.svg"
           alt="arrow-right"
-          class="w-8 h-8 mr-8 invisible group-hover:visible dark:filter dark:invert"
+          class="hidden lg:block w-8 h-8 mr-8 invisible group-hover:visible dark:filter dark:invert"
           id="arrow-1"
         />
         <a
@@ -160,7 +173,7 @@
         <img
           src="media/arrow_right.svg"
           alt="arrow-right"
-          class="w-8 h-8 mr-8 invisible group-hover:visible dark:filter dark:invert"
+          class="hidden lg:block w-8 h-8 mr-8 invisible group-hover:visible dark:filter dark:invert"
           id="arrow-2"
         />
         <a
@@ -173,7 +186,7 @@
         <img
           src="media/arrow_right.svg"
           alt="arrow-right"
-          class="w-8 h-8 mr-8 invisible group-hover:visible dark:filter dark:invert"
+          class="hidden lg:block w-8 h-8 mr-8 invisible group-hover:visible dark:filter dark:invert"
           id="arrow-3"
         />
         <a
@@ -187,7 +200,7 @@
         <img
           src="media/arrow_right.svg"
           alt="arrow-right"
-          class="w-8 h-8 mr-8 invisible group-hover:visible dark:filter dark:invert"
+          class="hidden lg:block w-8 h-8 mr-8 invisible group-hover:visible dark:filter dark:invert"
           id="arrow-4"
         />
         <a
@@ -200,9 +213,13 @@
 
     <div
       id="about-box"
-      class="w-4/5 h-full text-box overlay absolute top-0 left-0 p-5 opacity-0 invisible text-xl flex dark:text-lemi-offwhite"
+      class="overflow-auto lg:overflow:hidden lg:w-4/5 h-full text-box overlay absolute top-0 left-0 p-5 pb-56 lg:pb-5 opacity-0 invisible text-xl lg:flex dark:text-lemi-offwhite"
     >
-      <img src="media/leon.jpg" alt="Leon" class="h-full mr-8" />
+      <img
+        src="media/leon.jpg"
+        alt="Leon"
+        class="h-full mr-8 hidden lg:block"
+      />
       <div>
         <p class="mb-3">
           Hi, ich bin Leon, 27 Jahre alt und Masterstudent der Medieninformatik
@@ -219,7 +236,7 @@
           Technologie zu verbinden, um kreative und innovative Projekte zu
           realisieren.
         </p>
-        <p>
+        <p class="hidden lg:block">
           <em
             >Foto:
             <a href="https://www.dianaelschner.com" target="_blank"
@@ -228,11 +245,16 @@
           >
         </p>
       </div>
+      <p
+        class="backbutton mt-10 italic underline absolute left-1/2 transform -translate-x-1/2 lg:hidden cursor-pointer dark:text-lemi-offwhite"
+      >
+        Zurück
+      </p>
     </div>
 
     <div
       id="education-box"
-      class="text-box overlay absolute top-0 left-0 p-5 w-3/5 h-auto opacity-0 invisible text-xl dark:text-lemi-offwhite"
+      class="overflow-auto lg:w-3/5 h-full text-box overlay absolute top-0 left-0 p-5 pb-56 lg:pb-0 opacity-0 invisible text-xl dark:text-lemi-offwhite"
     >
       <p class="mb-8">
         <strong>M. Sc. Medieninformatik, HTWK Leipzig</strong><br />
@@ -253,11 +275,16 @@
           für elektronische Musik”</em
         >
       </p>
+      <p
+        class="backbutton mt-10 italic underline absolute left-1/2 transform -translate-x-1/2 lg:hidden cursor-pointer dark:text-lemi-offwhite"
+      >
+        Zurück
+      </p>
     </div>
 
     <div
       id="experience-box"
-      class="w-3/5 text-box overlay absolute top-0 left-0 p-5 h-auto opacity-0 invisible text-xl dark:text-lemi-offwhite"
+      class="overflow-auto lg:w-3/5 h-full text-box overlay absolute top-0 left-0 p-5 pb-56 lg:pb-0 opacity-0 invisible text-xl dark:text-lemi-offwhite"
     >
       <p class="mb-3">
         <strong>Deutsche Telekom MMS GmbH</strong><br />
@@ -292,11 +319,16 @@
         Print-Medien, Unterstützung beim Aufbau eines konsistenten visuellen
         Stils.
       </p>
+      <p
+        class="backbutton mt-10 italic underline absolute left-1/2 transform -translate-x-1/2 lg:hidden cursor-pointer dark:text-lemi-offwhite"
+      >
+        Zurück
+      </p>
     </div>
 
     <div
       id="skills-box"
-      class="text-box overlay absolute top-0 left-0 p-5 w-3/5 h-auto opacity-0 invisible text-xl dark:text-lemi-offwhite"
+      class="overflow-auto lg:w-3/5 h-full text-box overlay absolute top-0 left-0 p-5 pb-56 lg:pb-0 opacity-0 invisible text-xl dark:text-lemi-offwhite"
     >
       <ul>
         <li><strong>Technische Skills</strong></li>
@@ -314,16 +346,19 @@
         <li>Deutsch (Muttersprache)</li>
         <li>Englisch (B2)</li>
       </ul>
+      <p
+        class="backbutton mt-10 italic underline absolute left-1/2 transform -translate-x-1/2 lg:hidden cursor-pointer dark:text-lemi-offwhite"
+      >
+        Zurück
+      </p>
     </div>
 
     <div
       id="arrow-back"
-      class="absolute overlay bottom-0 right-0 mr-5 mb-5 invisible dark:filter dark:invert"
+      class="hidden lg:block absolute overlay bottom-0 right-0 mr-5 mb-5 invisible dark:filter dark:invert"
     >
       <img src="media/arrow_back.svg" alt="arrow-back" class="w-40 h-40" />
     </div>
-
-   
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>

@@ -2,6 +2,68 @@ var textbox_visible = false;
 var blurred = false;
 
       document.addEventListener("DOMContentLoaded", function () {
+        const mobileMediaQuery = window.matchMedia("(max-width: 767px)");
+
+        function handleMobileView(e) {
+          if (e.matches) {
+            // Add event listeners for mobile view
+            document.getElementById("about-link").addEventListener("click", handleLinkClick);
+            document.getElementById("education-link").addEventListener("click", handleLinkClick);
+            document.getElementById("experience-link").addEventListener("click", handleLinkClick);
+            document.getElementById("skills-link").addEventListener("click", handleLinkClick);
+            document.querySelectorAll(".backbutton").forEach((element) => {
+              element.addEventListener("click", handleLinkClick);
+            });
+          } else {
+            // Remove event listeners for mobile view if necessary
+            document.getElementById("about-link").removeEventListener("click", handleLinkClick);
+            document.getElementById("education-link").removeEventListener("click", handleLinkClick);
+            document.getElementById("experience-link").removeEventListener("click", handleLinkClick);
+            document.getElementById("skills-link").removeEventListener("click", handleLinkClick);
+            document.querySelectorAll(".backbutton").forEach((element) => {
+              element.removeEventListener("click", handleLinkClick);
+            });
+          }
+        }
+      
+        function handleLinkClick() {
+          const nav = document.getElementById("nav");
+          
+          if (nav.classList.contains("is-visible")) {
+            nav.classList.remove("fade-in-nav-animation");
+            nav.classList.add("fade-out-nav-animation");
+          setTimeout(() => {
+            nav.classList.add("hidden");
+            nav.classList.add("is-hidden");
+            nav.classList.remove("is-visible");
+          }, 1200);
+          }
+
+          if (nav.classList.contains("is-hidden")) {
+            //nav.classList.remove("fade-out-nav-animation");
+            nav.classList.add("fade-in-nav-animation");
+            nav.classList.remove("fade-out-nav-animation");
+            const fade_out_element = document.querySelectorAll(
+              ".text-box:not(.invisible)"
+            )[0].id;
+            fade_out(fade_out_element);
+            textbox_visible = false;
+            bg_unblur();
+            setTimeout(() => {
+              nav.classList.remove("hidden");
+              nav.classList.remove("is-hidden");
+              nav.classList.add("is-visible");
+
+            }, 200);
+          
+        }
+      }
+      
+        // Initial check
+        handleMobileView(mobileMediaQuery);
+      
+        // Listen for changes in the viewport size
+        mobileMediaQuery.addEventListener("change", handleMobileView);
 
         // Bounce animations for the arrows
         bounce("#arrow-1");
