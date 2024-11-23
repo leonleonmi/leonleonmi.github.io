@@ -2,7 +2,7 @@ var textbox_visible = false;
 var blurred = false;
 
       document.addEventListener("DOMContentLoaded", function () {
-        const mobileMediaQuery = window.matchMedia("(max-width: 767px)");
+        const mobileMediaQuery = window.matchMedia("(max-width: 900px)");
 
         function handleMobileView(e) {
           if (e.matches) {
